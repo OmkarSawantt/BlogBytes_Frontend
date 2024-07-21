@@ -56,7 +56,7 @@ const Search = () => {
   useEffect(() => {
     inputRef.current.focus();
     const getTitles = async () => {
-      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/posts/titles`)
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/posts/titles`)
       setMockSuggestions(response.data); 
     }
     getTitles();
